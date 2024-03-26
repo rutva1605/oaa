@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-iulwge&^1&o3c!mh4vx)z(%t!lab(m45uf+(ml$094k8ctj2#x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -76,7 +76,7 @@ WSGI_APPLICATION = "oaa_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-MONGO_DB_USERNAME = 'rutvapatel'
+'''MONGO_DB_USERNAME = 'rutvapatel'
 MONGO_DB_PASSWORD = 'Rutva@0709'
 
 # Construct the escaped MongoDB URI
@@ -96,7 +96,14 @@ DATABASES = {
             'authMechanism': 'SCRAM-SHA-1',
         }
     }
+}'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
 
 
 # Password validation
@@ -133,7 +140,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 #STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
