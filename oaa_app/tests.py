@@ -42,7 +42,7 @@ class TestViews(TestCase):
 
 class DatabaseConnectionTestCase(TestCase):
     def test_database_connection(self):
-        # Try to establish a connection with the database
+        # Testing connection with the database
         try:
             connection.ensure_connection()
             connected = True
